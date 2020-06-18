@@ -1,0 +1,31 @@
+Opened connection at 18-Sep-19 14:36:29 -06:00
+
+SELECT 
+    [Extent2].[OrderID] AS [OrderID], 
+    [Extent2].[CustomerID] AS [CustomerID], 
+    [Extent2].[EmployeeID] AS [EmployeeID], 
+    [Extent2].[OrderDate] AS [OrderDate], 
+    [Extent2].[RequiredDate] AS [RequiredDate], 
+    [Extent2].[ShippedDate] AS [ShippedDate], 
+    [Extent2].[ShipVia] AS [ShipVia], 
+    [Extent2].[Freight] AS [Freight], 
+    [Extent2].[ShipName] AS [ShipName], 
+    [Extent2].[ShipAddress] AS [ShipAddress], 
+    [Extent2].[ShipCity] AS [ShipCity], 
+    [Extent2].[ShipRegion] AS [ShipRegion], 
+    [Extent2].[ShipPostalCode] AS [ShipPostalCode], 
+    [Extent2].[ShipCountry] AS [ShipCountry], 
+    [Extent2].[ShipCityId] AS [ShipCityId]
+    FROM  [dbo].[Customers] AS [Extent1]
+    INNER JOIN [dbo].[Orders] AS [Extent2] ON [Extent1].[CustomerID] = [Extent2].[CustomerID]
+    WHERE N'London' = [Extent1].[City]
+
+
+-- Executing at 18-Sep-19 14:36:30 -06:00
+
+-- Completed in 75 ms with result: SqlDataReader
+
+
+
+Closed connection at 18-Sep-19 14:36:30 -06:00
+

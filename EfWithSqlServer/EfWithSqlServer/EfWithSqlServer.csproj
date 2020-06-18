@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C99F057-F9C6-4B45-A4ED-D1BAEEBAB372}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EfWithSqlServer</RootNamespace>
+    <AssemblyName>EfWithSqlServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Alphabetical_list_of_product.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Category.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Category_Sales_for_1997.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\City.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Country.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Current_Product_List.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Customer.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CustomerDemographic.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Customer_and_Suppliers_by_City.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CustOrderHist_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CustOrdersDetail_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CustOrdersOrders_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Employee.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Employee_Sales_by_Country_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Invoice.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NordwindEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NordwindEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NordwindEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\NordwindEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NordwindEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Order.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Orders_Qry.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Order_Detail.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Order_Details_Extended.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Order_Subtotal.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Product.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Products_Above_Average_Price.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Products_by_Category.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Product_Sales_for_1997.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Region.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SalesByCategory_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Sales_by_Category.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Sales_by_Year_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Sales_Totals_by_Amount.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Shipper.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sp_helpdiagrams_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Summary_of_Sales_by_Quarter.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Summary_of_Sales_by_Year.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Supplier.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\sysdiagram.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Ten_Most_Expensive_Products_Result.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Territory.cs">
+      <DependentUpon>NordwindEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EfWithSqlMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Data\NordwindEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NordwindEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\NordwindEntities.edmx.diagram">
+      <DependentUpon>NordwindEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\NordwindEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NordwindEntities.edmx</DependentUpon>
+      <LastGenOutput>NordwindEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\NordwindEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NordwindEntities.edmx</DependentUpon>
+      <LastGenOutput>NordwindEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
